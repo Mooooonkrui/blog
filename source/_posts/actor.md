@@ -2,6 +2,7 @@
 title: "[OSOW-S1EP1] Actor模型的C语言实现"
 date: 2025-09-14 19:43:02
 tags: [C/C++, C, 并发, Actor]
+categories: OSOW
 ---
 
 ## Cocurrence on the Begining
@@ -49,7 +50,7 @@ struct ACTOR {
 
 然后，我们构建出`ACTOR`的基本模型：
 
-```
+```c
 struct ACTOR {
 	UNIV data = nullptr;
 	HDLR hdlr = nullptr;
