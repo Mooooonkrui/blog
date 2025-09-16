@@ -65,3 +65,20 @@ ACTOR* new_actor(UNIV data, HDLR hdlr) {
 
 #define NEW_ACTOR(data, hdlr) new_actor(TO_UNIV(data), TO_HDLR(hdlr))
 ```
+
+这样，我们就能够创建出基本的Actor对象。Actor对象之间的信息传递是通过消息队列进行的，在C中有大体有两种解决方案。
+一种是使用POSIX的`pipe()`创建管道，通过管道的同步方式传递信息；另一种是另建守护进程，通过守护进程作为router完成消息的转发。
+原则上，通过守护进程进行转发的方式会部分降低效率，但是此处为了方便通过actor的地址来分发消息，采取守护进程的方案。
+
+大致来说，在每个Actor创建时，我们要通过`pipe()`生成对应的文件描述符。这些文件描述符存储在守护进程之中，通过进程的PID索引。
+对于每个消息，我们还要定义消息的格式：
+
+```c
+struct message {
+	size_t from;
+	size_t to;
+	UNIV data;
+}
+```
+
+而每个Actor与守护进程的通信，可以用类似kernel switch的方式，也可以用管道的方式。最方便的还是通过管道的文件描述符，直接发送一个`message`结构即可。
