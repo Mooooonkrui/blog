@@ -5,10 +5,9 @@ article:
 
 inject:
   head:
-    - <link href="https://fonts.font.im/css?family=IBM+Plex+Mono|Lato|Merriweather+Sans|Noto+Sans" rel="stylesheet">
+    - <link href="https://fonts.font.im/css?family=Merriweather+Sans|Noto+Sans" rel="stylesheet">
   script:
 
 style:
   font-family:
-    body: '"Merriweather Sans", "Lato", "Noto Sans"'
-    monospace: "IBM Plex Mono"
+    body: '"Merriweather Sans", "Noto Sans"'
