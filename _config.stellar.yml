@@ -11,3 +11,8 @@ inject:
 style:
   font-family:
     body: '"Merriweather Sans", "Noto Sans"'
+
+comments:
+  service: beaudar
+  beaudar:
+    repo: Mooooonkrui/beaudar
