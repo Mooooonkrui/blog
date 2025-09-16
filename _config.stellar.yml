@@ -3,7 +3,12 @@
 article:
   type: tech
 
-avatar: https://youke1.picui.cn/s1/2025/09/14/68c69594b0c21.png
-# logo: https://youke1.picui.cn/s1/2025/09/14/68c69594b0c21.png
-favicon: https://youke1.picui.cn/s1/2025/09/14/68c69594b0c21.png
-# logo: TODO
+inject:
+  head:
+    - <link href="https://fonts.font.im/css?family=IBM+Plex+Mono|Lato|Merriweather+Sans|Noto+Sans" rel="stylesheet">
+  script:
+
+style:
+  font-family:
+    body: '"Merriweather Sans", "Lato", "Noto Sans"'
+    monospace: "IBM Plex Mono"
