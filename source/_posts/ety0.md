@@ -9,9 +9,8 @@ categories: ETY
 
 The naming of objects, born arbitrary on the very beginning, as shui in Chinese, water in English, eau in Français.
 
-{% quot lettré, the knowledged; illettré, the unknowledged %}
+> lettré, the knowledged; illettré, the unknowledged
 
-{% quot A, acute; D, arch; B, double arch %}
+> A, acute; D, arch; B, double arch
 
-{% quot désastre, dés-astre; catastroph, cat-astroph %}
-
+> désastre, dés-astre; catastroph, cat-astroph

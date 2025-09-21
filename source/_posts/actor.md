@@ -7,7 +7,9 @@ categories: OSOW
 
 ## Cocurrence on the Begining
 
-> 计算机科学之开始，许多范式尚未确立，使用的时候尚须用指针指指点点。
+{% blockquote $}
+计算机科学之开始，许多范式尚未确立，使用的时候尚须用指针指指点点。
+{% endblockquote %}
 
 在计算机科学的上古年代，或许不只是上古，mutex、semaphore、conditions、monitor、atomic一直是并发编程中的常客。并发意味着数据的流动和共享，由此带来了数据安全与竞争的风险，轻则出错，重则死锁。程序员往往需要精细地操作每一个数据的所有权和生命周期，规划复杂的竞争条件，甚至又是需要经过形式化验证，才能构造出一个可堪一用的并发系统。每一个计算机学生应该都知道，仅仅是一个无比简单的Reader-Writer问题，也需要使用semaphore甚至conditions才能使之正常运行。
 
